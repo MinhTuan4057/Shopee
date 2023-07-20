@@ -1,0 +1,280 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  -webkit-animation: fadeIn linear 0.1s;
+          animation: fadeIn linear 0.1s;
+}
+
+.modal__body {
+  --growth-form: 0.7;
+  --growth-to: 1;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  animation: growth linear;
+  -webkit-animation: growth linear 0.1s;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.auth-form {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-animation: modalShow 0.2s linear;
+          animation: modalShow 0.2s linear;
+}
+
+.auth-form2 {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.auth-form__container {
+  padding: 0 32px;
+}
+
+.auth-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  margin-top: 10px;
+}
+
+.auth__form__heading {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+  font-size: 1.6em;
+  font-weight: 400px;
+  color: #ee4d2d;
+  cursor: pointer;
+}
+
+.auth-form__input {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  padding: 0 12px;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  outline: none;
+}
+
+.auth-form__input:focus {
+  border-color: #888;
+}
+
+.auth-form__aside {
+  margin-top: 18px;
+}
+
+.auth-form__policy-text {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.auth-form__text-link {
+  color: #ee4d2d;
+  text-decoration: none;
+}
+
+.auth-form__controls {
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-form__controls-back {
+  margin-right: 8px;
+  background-color: white;
+}
+
+.auth-form__socials {
+  background-color: #f5f5f5;
+  padding: 16px 36px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.auth-form__socials-icon {
+  font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook {
+  color: #fff;
+  background-color: #3a5a98;
+}
+
+.auth-form__socials--facebook .auth-form__socials-icon {
+  color: #fff;
+}
+
+.auth-form__socials-title {
+  margin: 0 33px;
+}
+
+.auth-form__socials--google {
+  color: #666;
+  background-color: #fff;
+}
+
+.auth-form__help {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-form__help-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #939393;
+}
+
+.auth-form__help-separate {
+  display: block;
+  height: 22px;
+  margin: 1px 16px 0;
+  border-left: 1px solid #eaeaea;
+}
+
+.auth-form__help-forgot {
+  color: #ee4d2d;
+}
+
+.login {
+  display: none;
+}
+
+.delete2 {
+  border: none;
+  background-color: #fff;
+  color: #333;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.check__mode {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.sigin {
+  display: none;
+}
+
+.login {
+  display: none;
+}
+
+.header__navbar-user-item:hover {
+  background-color: #fafafa;
+}
+
+@-webkit-keyframes modalShow {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes modalShow {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 600px;
+}
+.form .contain__form {
+  border-radius: 10px;
+  border: 1px solid #a4a4a4;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.form .title__form {
+  padding: 20px;
+}
+.form .inline {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(211, 211, 211);
+}
+
+.form__input {
+  padding: 20px;
+}
+.form__input .form-control {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.add__btn {
+  text-align: end;
+}
+
+.title__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check__mode {
+  cursor: pointer;
+}
+
+.modal2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.modal2 .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.none {
+  display: none;
+}
+
+.product {
+  display: none;
+}/*# sourceMappingURL=modal.css.map */

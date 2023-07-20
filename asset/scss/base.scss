@@ -1,0 +1,341 @@
+$primarycolor: #ee4d2d;
+    $whitecolor: #fff;
+    $blackcolor:#000;
+    $textcolor:#333;
+    $bordercolor: #dbdbdb;
+    $stargoldcolor: #ffce3e;
+    $headerheight: 120px;
+    $navbarheight: 34px;
+    $text-size: (10, 12, 13, 14, 15, 16, 18, 20, 24, 26, 28, 30, 40, 50);
+    $fontWeight: (200, 400, 500, 600, 700, 800, 900);
+
+
+
+    * {
+        box-sizing: inherit;
+    }
+    
+    html {
+        font-size: 62.5%;
+        line-height: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+    }
+    /* Responsive */
+    .grid {
+        width: 1500px;
+        max-width: 100%;
+        margin: 0 auto;
+  
+    .grid__full-width {
+        width: 100%;
+    }
+    
+    .gird__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: 5px;
+    }
+    /* Test */
+    .gird__column-2 {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 15%;
+    }
+    .gird__column-2-4 {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 20%;
+    }
+    .gird__column-10 {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 85%;
+    }
+}
+
+//font-size
+@for $i from 1 to length($text-size) {
+    $size: nth($text-size, $i); 
+    .text-#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+//font-weight
+@each $item in $fontWeight {
+    .font-#{$item} {
+        font-weight: $item;
+    }
+}
+
+//margin
+@for $margin from 1 through 50 {
+    .mr-#{$margin} {
+        margin-right: $margin * 1px;
+    }
+}
+
+//margin
+@for $margin from 1 through 50 {
+    .ml-#{$margin} {
+        margin-left: $margin * 1px;
+    }
+}
+
+//margin
+@for $margin from 0 through 50 {
+    .mt-#{$margin} {
+        margin-top: $margin * 1px;
+    }
+}
+
+//margin
+@for $margin from 0 through 50 {
+    .mb-#{$margin} {
+        margin-bottom: $margin * 1px;
+    }
+}
+
+//padding
+@for $padding from 0 through 50 {
+    .pr-#{$padding} {
+        padding-right: $padding * 1px;
+    }
+}
+
+@for $padding from 0 through 50 {
+    .pl-#{$padding} {
+        padding-left: $padding * 1px;
+    }
+}
+
+@for $padding from 0 through 50 {
+    .pt-#{$padding} {
+        padding-top: $padding * 1px;
+    }
+}
+
+@for $padding from 0 through 50 {
+    .pb-#{$padding} {
+        padding-bottom: $padding * 1px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-form));
+   
+}
+    to {
+        transform: scale(var(--growth-to));
+       }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.modal__body {
+    --growth-form: 0.7;
+    --growth-to:1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear ;
+    -webkit-animation: growth linear 0.1s;
+}
+/* Button style */
+
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+ 
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: $textcolor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6em;
+
+
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+
+}
+.btn.btn--primary {
+    color: $whitecolor;
+    background-color: $primarycolor;
+&:hover {
+    background-color: #f05d41;
+}
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+/* Selection */
+.select-input {
+  position: relative;
+  min-width: 200px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 2px;
+  background-color: $whitecolor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-input__label {
+    font-size: 1.4rem;
+    position: relative;
+}
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+.select-input:hover .select-input__list {
+    display: block;
+}
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: $whitecolor;
+    padding: 9px 16px;
+    list-style: none;
+    display: none;
+    z-index: 1;
+}
+.select-input__link {
+    font-size: 1.4rem;
+    color: $textcolor;
+    text-decoration: none;
+    display: block;
+    padding: 7px 0;
+}
+.select-input__link:hover {
+    color: $primarycolor;
+}
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+.pagination-item {
+    margin: 0 12px;
+
+}
+.pagination-item--active .pagination-item__link {
+    color: $whitecolor;
+    background-color: $primarycolor;
+}
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #e93f3f;
+}
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: $whitecolor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .select-input__label {
+      font-size: 1.4rem;
+      position: relative;
+  }
+  .select-input__icon {
+      font-size: 1.4rem;
+      color: rgb(131, 131, 131);
+      position: relative;
+      top: 1px;
+  }
+  .select-input:hover .select-input__list {
+      display: block;
+  }
+  .select-input__list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25px;
+      border-radius: 2px;
+      background-color: $whitecolor;
+      padding: 9px 16px;
+      list-style: none;
+      display: none;
+      z-index: 1;
+  }
+  .select-input__link {
+      font-size: 1.4rem;
+      color: $textcolor;
+      text-decoration: none;
+      display: block;
+      padding: 7px 0;
+  
+  &:hover {
+      color: $primarycolor;
+  }
+}

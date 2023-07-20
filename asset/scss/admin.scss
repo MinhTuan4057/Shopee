@@ -1,0 +1,312 @@
+$primarycolor: #ee4d2d;
+$whitecolor: #fff;
+$blackcolor:#000;
+$textcolor:#333;
+$bordercolor: #dbdbdb;
+$stargoldcolor: #ffce3e;
+$header-height: 120px;
+$navbar-height: 34px;
+$header-with-search-height: ($header-height) - ($navbar-height);
+
+//section
+.container {
+    padding: 50px 0;
+
+    .contain{
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+    }
+    .item{
+    width: 450px;
+    flex-wrap: wrap;
+    padding: 0 20px 10px;
+    background-color: #313131;
+    display: flex;
+    border-radius: 10px;
+
+}
+    }
+    .section__item{
+        max-width: 33%;
+        padding-left: 50px;
+    }
+
+.bg__contain {
+    display: flex;
+    height: 117px;
+}
+
+.logo {
+    position: relative;
+    
+    .logo__apple {
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+        border: 5px solid #ccc;
+}
+    .name__logo{
+    color: white;
+    position: absolute;
+    top: 73px;
+    left: 6px;
+    bottom: 0;
+    right: 0;
+    width: 78px;
+    text-align: center;
+    height: 19px;
+    background: #ee4d2d;
+    border-radius: 2px;
+    padding: 2px;
+
+    }
+}
+
+.contain__title {
+
+    .title__name {
+        color: $whitecolor;
+        line-height: 0;
+
+    }
+    .online {
+        color: #ccc;
+    
+    }
+}
+
+.follow {
+    justify-content: center;
+    display: flex;
+    width: 411px;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    h2 {
+        color: $whitecolor;
+        line-height: 0.5;
+
+    }
+    i{
+        color: $whitecolor;
+    }
+}
+
+.section__overview {
+    display: flex;
+    align-items: center;
+    i{
+        color: $textcolor;
+    }
+    .section__overview-title {
+        color: $textcolor;
+        margin: 0;
+    }
+    .section__overview-title2{
+        color: $primarycolor;
+        margin: 0;
+    }
+}
+
+.add__product {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .contain__product{
+        width: 173px;
+        height: 40px;
+        background-color: $primarycolor;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        transition: ease 0.3s;
+    
+    &:hover {
+        background-color: #fb6445;
+        color: $whitecolor;
+        cursor: pointer;
+    }
+
+    button {
+        text-align: center;
+        border: none;
+        color: $whitecolor;
+        background-color: $primarycolor;
+        transition: ease 0.3s;
+    
+        &:hover {
+            background-color: #fb6445;
+            color: $whitecolor;
+            cursor: pointer;
+        }
+    }
+    .color{
+        color: $whitecolor;
+    }
+
+}
+
+.contain__prd{
+    max-width: 1500px;
+    margin: auto;
+}
+.add__sp {
+    width: 12%;
+}
+
+.title{
+    max-width: 100%;
+
+    th{
+        text-align: inherit;
+    }
+}
+.add__product {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    margin: auto;
+    max-width: 1500px;
+
+    .stt{
+        width: 50px !important;
+    }
+    .content__pro{
+        display: flex;
+
+    }
+    .item__content {
+        border: 1px solid #ccc;
+        width: 250px;
+        text-align: initial;
+        height: auto;
+        color: $textcolor;
+        padding: 20px;
+    }
+}
+
+.price {
+    width: 120px !important;
+}
+// .discount {
+//     width: 170px !important;
+// }
+.corpri {
+    width: 130px !important;
+}
+.house {
+    width: 130px !important;
+}
+
+.edit{
+    width: 100px !important;
+}
+.btn2 {
+    width: 100px;
+    background-color: $primarycolor;
+    color: $whitecolor;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    transition: ease 0.3s;
+
+&:hover {
+    background-color: #fb6445;
+}
+}
+
+
+.lineheight {
+    line-height: 0.7;
+    color: $textcolor;
+}
+
+.form {
+    background-color: $whitecolor;
+    border-radius: 10px;
+    width: 500px;
+    .contain__form {
+    border: 1px solid #a4a4a4;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    }
+    .title__form {
+       padding: 20px;
+
+    }
+    .inline {
+        width: 100%;
+        height: 1px;
+        background-color: rgb(211, 211, 211);
+    }
+}
+
+.form__input {
+    padding: 20px;
+    .form__group {
+
+    }
+    .form-control {
+        height: 40px;
+        border-radius: 5px;
+}
+}
+
+.add__btn {
+    text-align: end;
+}
+.title__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check__mode {
+    cursor: pointer;
+}
+
+.modal2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+
+    .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+.none {
+    display: none;
+}
+.product {
+    display: none;
+}
+.filter{
+    max-width: 1500px;
+    margin: auto;
+}
+.select-input__list {
+    box-shadow: 0 1px 2px #e0e0e0;
+}
+.search{
+    width: 630px;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
